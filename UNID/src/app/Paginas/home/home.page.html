@@ -1,0 +1,57 @@
+<ion-header>
+  <ion-toolbar color="primary" align="center">
+    <ion-buttons slot="start" (click)="MENU()">
+      <ion-menu-button auto-hide="false"></ion-menu-button>
+    </ion-buttons>
+    <ion-title class="title"><img src="assets/UNDICOMPLETO.png" width="120" height="60" align="right"></ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content class="ion-padding" align="center">
+  <div class="container">
+    <ion-button (click)="abrirmodal()" id="botonadd" expand="block" class="add-button">
+      <ion-icon slot="icon-only" name="add-circle"></ion-icon>
+    </ion-button>
+    <table class="table">
+      <thead>
+        <tr class="table-header">
+          <th>ID</th>
+          <th>MES</th>
+          <th>AÑO</th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody *ngFor="let i of Info">
+        <tr class="table-row">
+          <td>{{i.ID}}</td>
+          <td>{{i.Semana}}</td>
+          <td>{{i['Año']}}</td>
+          <td class="info-button">
+            <ion-button shape="round" size="small" id="botoninf" fill="clear">
+              <ion-icon slot="icon-only" name="information-circle-outline"></ion-icon>
+            </ion-button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <ion-modal [isOpen]="isModalOpen">
+    <ng-template>
+      <ion-header>
+        <ion-toolbar align="center" color="primary">
+          <ion-title><strong>Agregar Registro</strong></ion-title>
+        </ion-toolbar>
+      </ion-header>
+      <ion-content class="ion-padding" align="center">
+        <ion-slide>     
+            <ion-input #fech type="month" placeholder="Semana y Año" ></ion-input>  
+        </ion-slide>
+      </ion-content>
+      <ion-footer>
+        <ion-button (click)="cancel()" fill="clear" [strong]="true" color="danger" class="modal-button">Cancelar</ion-button>
+        <ion-button (click)="confirm(fech.value)" [strong]="true" fill="clear" color="success" class="modal-button">Crear&nbsp;
+          <ion-icon slot="end" name="save"></ion-icon>
+        </ion-button>
+      </ion-footer>      
+    </ng-template>
+  </ion-modal>
+</ion-content>

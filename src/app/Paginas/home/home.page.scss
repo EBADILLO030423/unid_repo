@@ -1,0 +1,116 @@
+ion-content {
+    --background: #ffb500;
+}
+table {
+    width: 100%;
+    border-spacing: 0px;
+    border-collapse: separate;
+  }
+  
+  .table {
+    margin: 0 auto;
+  }
+  
+  tr {
+    background-color: #e0e0e000;
+  }
+  
+  td {
+    font-size: small;
+    text-align: center;
+    border-color: #08001d;
+    border-style: solid;
+    color: #020202;
+    padding: 8px;
+  }
+  th:nth-child(4),
+  td:nth-child(4) {
+    min-width: 5px;
+    max-width: 5px;
+  }
+  
+  th {
+    padding-left: 2px;
+    padding-right: 2px;
+    text-align: center;
+    background-color: #08001d;
+    border-style: solid;
+    border-color: #08001d;
+    color: #ffffff;
+    padding: 8px;
+  }
+  
+  .black {
+    border-color: #ffffff;
+    border-style: solid;
+    border-width: .5px;
+    border-top: none;
+    border-bottom: #000000;
+    color: #ffffff;
+  }
+  
+  .white {
+    color: #ffffff;
+  }
+  #botonadd {
+    --background: #fc000000;
+    --color: #ffffff;
+    --color-activated: #2dd36f;
+    --color-focused: #2dd36f;
+    --color-hover: #2dd36f;
+    --opacity: 1;
+    --padding-bottom: 2px;
+    --padding-end: 2px;
+    --padding-start: 2px;
+    --padding-top: 2px;
+    --ripple-color: #ffffff00;
+  }
+  #botoninf {
+    --background: #fefefe00;
+    --color: #000000;
+    --color-activated: #000000;
+    --color-focused: #000000;
+    --color-hover: #000000;
+    --background-activated: #ffffff;
+    --background-activated-opacity: 1;
+    --background-focused: #ffffff;
+    --background-focused-opacity: 1;
+    --background-hover: #e7d3b6;
+    --background-hover-opacity: 1;
+    --opacity: 1;
+    --padding-bottom: 2px;
+    --padding-end: 2px;
+    --padding-start: 2px;
+    --padding-top: 2px;
+    --ripple-color: #ffffff00;
+  }
+  ion-input{
+    background-color: #ffb500;
+    color: #000000;
+    padding: 20px;
+    font-size: xx-large;
+  }
+  ion-footer{
+    background-color: #08001d;
+  }
+  .prueba2,.prueba3{
+    padding-left: 2px;
+    padding-right: 2px;
+    background-color: #fae5c6;
+    color: #000000;
+  }
+  .prueba3:hover {
+    padding-left: 2px;
+    padding-right: 2px;
+    background-color: #e7d3b6;
+    color: #000000;
+  }
+
+  .swal2-container {
+    z-index: 9999 !important;
+  }
+  
+  .swal2-modal {
+    width: auto !important;
+    max-width: 500px !important;
+  }

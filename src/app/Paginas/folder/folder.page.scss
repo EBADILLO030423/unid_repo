@@ -1,0 +1,50 @@
+.background-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  z-index: -1;
+}
+#test {
+  background:none;
+  box-shadow: none;
+}
+ion-card {
+  background: rgba(252, 252, 252, 0.66);
+  width: auto;
+  height: auto;
+}
+ion-input {
+  background:none;
+} 
+ion-item {
+  --background: none;
+  --background-activated:none;
+  --background-activated-opacity: 1;
+  --background-focused: none;
+  --background-focused-opacity: 1;
+  --background-hover: none;
+  --background-hover-opacity: 1;
+} 
+
+#test2{
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  background:none;
+  box-shadow: none;
+    
+}
+.marge{
+  margin: 30px;
+}
+#size{
+height: auto;
+width: 50%;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+}

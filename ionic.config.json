@@ -1,0 +1,7 @@
+{
+  "name": "UNID",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

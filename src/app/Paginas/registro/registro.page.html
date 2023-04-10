@@ -1,0 +1,57 @@
+<ion-header>
+  <ion-toolbar color="secondary" align="center">
+    <ion-buttons slot="start" (click)="MENU()">
+      <ion-menu-button auto-hide="false"></ion-menu-button>
+    </ion-buttons>
+<img src="assets/UNDICOMPLETO.png" width="120" height="60" align="right">
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding" align="center">
+
+  <table class="table" align="center">
+    <thead>
+      <tr class="prueba2">
+        <th class="white">AC-No.</th>
+        <th class="white">Nombre</th>
+        <th class="white">Fecha</th>
+        <th class="white">Dia</th>
+        <th class="white">Hora</th>
+        <th class="white">Estado</th>
+        <th class="white">Tipo</th>
+      </tr>
+    </thead>
+    <tbody *ngFor="let i of Info">
+      <tr>
+        <td class="prueba2" *ngIf="i.Tipo == 'FOT'">{{i.ID}}</td>
+        <td class="prueba2" *ngIf="i.Tipo == 'FOT'">{{i.Nombre}}</td>
+        <td class="prueba2" *ngIf="i.Tipo == 'FOT'">{{i.Fecha}}</td>
+        <td class="prueba2" *ngIf="i.Tipo == 'FOT'">{{i.Dia}}</td>
+        <td class="prueba2" *ngIf="i.Tipo == 'FOT'">{{i.Hora}}</td>
+        <td class="prueba2" *ngIf="i.Tipo == 'FOT'">{{i.Estado}}</td>
+        <td class="prueba2" *ngIf="i.Tipo == 'FOT'">{{i.Tipo}}</td>
+      </tr>
+      <tr>
+        <td class="prueba2" *ngIf="i.Tipo != 'FOT'" id="noaprobado">{{i.ID}}</td>
+        <td class="prueba2" *ngIf="i.Tipo != 'FOT'" id="noaprobado">{{i.Nombre}}</td>
+        <td class="prueba2" *ngIf="i.Tipo != 'FOT'" id="noaprobado">{{i.Fecha}}</td>
+        <td class="prueba2" *ngIf="i.Tipo != 'FOT'" id="noaprobado">{{i.Dia}}</td>
+        <td class="prueba2" *ngIf="i.Tipo != 'FOT'" id="noaprobado">{{i.Hora}}</td>
+        <td class="prueba2" *ngIf="i.Tipo != 'FOT'" id="noaprobado">{{i.Estado}}</td>
+        <td class="prueba2" *ngIf="i.Tipo != 'FOT'" id="noaprobado">{{i.Tipo}}</td>
+      </tr>
+  
+    </tbody>
+  </table>
+  
+  <div class="file-select" id="src-file1" (change)="readExcelFile($event)">
+    <input type="file" name="src-file1" aria-label="Archivo">
+  </div>
+
+  <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+    <ion-fab-button color="secondary" (click)="testdedia()">
+      <ion-icon name="save"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+
+</ion-content>

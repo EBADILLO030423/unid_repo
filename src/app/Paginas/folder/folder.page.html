@@ -1,0 +1,46 @@
+<ion-header>
+  <ion-toolbar color="secondary" align="center">
+    <ion-buttons slot="start">
+      <ion-menu-button auto-hide="false" (click)="MENU()"></ion-menu-button>
+    </ion-buttons>
+    <img src="assets/UNDICOMPLETO.png" width="120" height="60" align="right">
+  </ion-toolbar>
+</ion-header>
+
+<ion-content align="center">
+  <ion-card class="ion-align-items-center" id="size">
+    &nbsp;
+    <ion-card id="test">
+      <div align="center" class="marge"><img src="assets/UNIDOR.png" width="90" height="90"></div>
+    </ion-card>
+
+    <h1 align="center"></h1>
+    <ion-card id="test2">
+      <ion-item>
+        <ion-label color="dark" position="floating" align="left">Usuario</ion-label>
+        <ion-input #email placeholder="Ingresa el ususario" type="email" align="left" ngModel email ></ion-input>
+        <ion-button slot="start" size="small" fill="clear" disabled="true"><ion-icon name="person" color="secondary"></ion-icon></ion-button>
+        <ion-note slot="helper"></ion-note>
+        <ion-note slot="error">Coloca un email válido</ion-note>
+      </ion-item>
+
+      <ion-item>
+        <ion-label color="dark" position="floating" align="left">Contraseña</ion-label>
+        <ion-input #pass placeholder="Ingresa la contraseña" align="left" type="password" ngModel minlength="8"></ion-input>
+        <ion-note slot="helper"></ion-note>
+        <ion-note slot="error">Min 8 caracteres</ion-note>
+        <ion-button slot="start" size="small" fill="clear" disabled="true"><ion-icon name="lock-closed" color="secondary"></ion-icon></ion-button>
+        <ion-button slot="end" size="small" fill="clear"></ion-button>
+      </ion-item>
+      <div>&nbsp;</div>
+      <div>&nbsp;</div>
+      <div>&nbsp;</div>
+      <ion-button color="secondary" (click)="Log(email.value, pass.value)">
+        <strong>INCIAR SESIÓN</strong>
+      </ion-button>
+
+    </ion-card>
+  </ion-card>
+
+  <div class="background-image" [style.backgroundImage]="'url(assets/FondoUNI.png)'"></div>
+</ion-content>

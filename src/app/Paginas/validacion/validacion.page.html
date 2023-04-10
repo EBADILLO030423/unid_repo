@@ -1,0 +1,143 @@
+<ion-header>
+  <ion-toolbar color="secondary" align="center">
+    <ion-buttons slot="start" (click)="MENU()">
+      <ion-menu-button auto-hide="false"></ion-menu-button>
+    </ion-buttons>
+<img src="assets/UNDICOMPLETO.png" width="120" height="60" align="right">
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding" align="right">
+  <div class="spinner-container" *ngIf="isLoading">
+    <ion-spinner></ion-spinner>
+    <ion-text color="primary">
+      <h1><strong>LOADING...</strong></h1>
+    </ion-text>
+  </div>  
+<ion-button (click)="invalid()" color="secondary" fill="clear" shape="round">
+  <ion-icon slot="icon-only" name="alert-circle-outline"></ion-icon>
+</ion-button>
+  <table class="table" align="center" *ngIf="isLoading==false">
+    <thead>
+      <tr class="prueba2">
+        <th class="white">ID</th>
+        <th class="white">Nombre</th>
+        <th class="white">Fecha</th>
+        <th class="white"> Dia </th>
+        <th class="white">Horario E</th>
+        <th class="white">Entrada</th>
+        <th class="white">Estatus E</th>
+        <th class="white">Horario S</th>
+        <th class="white">Salida</th>
+        <th class="white">Estatus S</th>
+        <th class="white">Comentarios</th>
+      </tr>
+    </thead>
+    <tbody *ngFor="let i of Info2">
+      <tr *ngIf="i.EVE=='En rango'&&i.EVS=='En rango'">
+        <td class="prueba2">{{i.Docente}}</td>
+        <td class="prueba2">{{i.Nombre}}</td>
+        <td class="prueba2">{{i.Fecha}}</td>
+        <td class="prueba2">{{i.Dia}}</td>
+        <td class="prueba2">{{i.HORAINICIO}}</td>
+        <td class="prueba2">{{i.HORAE}}</td>
+        <td class="prueba2">{{i.EVE}}</td>
+        <td class="prueba2">{{i.HORAFIN}}</td>
+        <td class="prueba2">{{i.HORAS}}</td>
+        <td class="prueba2">{{i.EVS}}</td>
+        <td class="prueba2">
+          <textarea></textarea>
+        </td>
+      </tr>
+      <tr *ngIf="i.EVE!='En rango'&&i.EVS=='En rango'">
+        <td class="prueba2">{{i.Docente}}</td>
+        <td class="prueba2">{{i.Nombre}}</td>
+        <td class="prueba2">{{i.Fecha}}</td>
+        <td class="prueba2">{{i.Dia}}</td>
+        <td class="noap">{{i.HORAINICIO}}</td>
+        <td class="noap">{{i.HORAE}}</td>
+        <td class="noap">{{i.EVE}}</td>
+        <td class="prueba2">{{i.HORAFIN}}</td>
+        <td class="prueba2">{{i.HORAS}}</td>
+        <td class="prueba2">{{i.EVS}}</td>
+        <td class="prueba2">
+          <textarea></textarea>
+        </td>
+      </tr>
+      <tr *ngIf="i.EVE=='En rango'&& i.EVS!='En rango'">
+        <td class="prueba2">{{i.Docente}}</td>
+        <td class="prueba2">{{i.Nombre}}</td>
+        <td class="prueba2">{{i.Fecha}}</td>
+        <td class="prueba2">{{i.Dia}}</td>
+        <td class="prueba2">{{i.HORAINICIO}}</td>
+        <td class="prueba2">{{i.HORAE}}</td>
+        <td class="prueba2">{{i.EVE}}</td>
+        <td class="noap">{{i.HORAFIN}}</td>
+        <td class="noap">{{i.HORAS}}</td>
+        <td class="noap">{{i.EVS}}</td>
+        <td class="prueba2">
+          <textarea></textarea>
+        </td>
+      </tr>
+      <tr *ngIf="i.EVE!='En rango'&&i.EVS!='En rango'">
+        <td class="prueba2">{{i.Docente}}</td>
+        <td class="prueba2">{{i.Nombre}}</td>
+        <td class="prueba2">{{i.Fecha}}</td>
+        <td class="prueba2">{{i.Dia}}</td>
+        <td class="noap">{{i.HORAINICIO}}</td>
+        <td class="noap">{{i.HORAE}}</td>
+        <td class="noap">{{i.EVE}}</td>
+        <td class="noap">{{i.HORAFIN}}</td>
+        <td class="noap">{{i.HORAS}}</td>
+        <td class="noap">{{i.EVS}}</td>
+        <td class="prueba2">
+          <textarea></textarea>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+<ion-fab vertical="bottom" horizontal="end" slot="fixed" *ngIf="isLoading==false">
+  <ion-fab-button color="secondary">
+    <ion-icon name="save"></ion-icon>
+  </ion-fab-button>
+</ion-fab>
+
+<ion-modal [isOpen]="isModalOpen">
+  <ng-template>
+    <ion-header>
+      <ion-toolbar align="center" color="secondary">
+        <ion-title><strong>Registros Invalidos</strong></ion-title>
+      </ion-toolbar>
+    </ion-header>
+    <ion-content class="ion-padding" align="center">
+      <table class="table" align="center">
+        <thead>
+          <tr class="prueba2">
+            <th class="white">ID</th>
+            <th class="white">Nombre</th>
+            <th class="white">Fecha</th>
+            <th class="white">Dia</th>
+            <th class="white">Hora</th>
+            <th class="white">Tipo</th>
+          </tr>
+        </thead>
+        <tbody *ngFor="let i of Info3">
+          <tr>
+            <td class="prueba2">{{i.attributes.Docente}}</td>
+            <td class="prueba2">{{i.attributes.Nombre}}</td>
+            <td class="prueba2">{{i.attributes.Fecha}}</td>
+            <td class="prueba2">{{i.attributes.Dia}}</td>
+            <td class="prueba2">{{i.attributes.Hora}}</td>
+            <td class="prueba2">{{i.attributes.Tipo}}</td>
+          </tr>
+        </tbody>
+      </table>
+    </ion-content>
+      <ion-footer align="right">
+          <ion-button (click)="Modal()" fill="clear" [strong]="true" color="danger">Cerrar</ion-button>
+      </ion-footer>      
+  </ng-template>
+</ion-modal>
+
+</ion-content>

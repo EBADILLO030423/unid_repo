@@ -1,0 +1,65 @@
+<ion-header>
+  <ion-toolbar color="secondary" align="center">
+    <ion-buttons slot="start" (click)="MENU()">
+      <ion-menu-button auto-hide="false"></ion-menu-button>
+    </ion-buttons>
+<img src="assets/UNDICOMPLETO.png" width="120" height="60" align="right">
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding" align="center">
+
+  <table class="table" align="center">
+    <thead>
+      <tr><th colspan="3" class="white"><ion-button (click)="abrirmodal()" id="botonadd" expand="block"><ion-icon slot="icon-only" name="add-circle"></ion-icon></ion-button></th></tr>
+      <tr class="prueba2">
+        <th class="white">ID</th>
+        <th class="white">MES</th>
+        <th class="white">AÑO</th>
+      </tr>
+    </thead>
+    <tbody *ngFor="let i of Datos">
+      <tr>
+        <td class="prueba2"><strong>{{i.id}}</strong></td>
+        <td class="prueba2"><strong>{{i.attributes.Month}}</strong></td>
+        <td class="prueba2"><strong>{{i.attributes.Year}}</strong></td>
+        <td class="prueba3" >
+          <ion-button
+            shape="round"
+            size="small"
+            id="botoninf"
+            fill="clear"
+            (click)="nav(i.id)"
+          >
+            <ion-icon
+              slot="icon-only"
+              name="information-circle-outline"
+            ></ion-icon>
+          </ion-button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+        <ion-modal [isOpen]="isModalOpen">
+          <ng-template>
+            <ion-header>
+              <ion-toolbar align="center" color="secondary">
+                <ion-title><strong>Agregar Registro</strong></ion-title>
+              </ion-toolbar>
+            </ion-header>
+            <ion-content class="ion-padding" align="center">
+              <ion-slide>     
+                  <ion-input #fech type="month" placeholder="Semana y Año" ></ion-input>  
+              </ion-slide>
+      
+            </ion-content>
+              <ion-footer align="right">
+                  <ion-button (click)="cancel()" fill="clear" [strong]="true" color="danger">Cancelar</ion-button>
+                  <ion-button (click)="confirm(fech.value)" [strong]="true" fill="clear" color="success" >Crear&nbsp;
+                    <ion-icon slot="end" name="save"></ion-icon>
+                  </ion-button>
+              </ion-footer>      
+          </ng-template>
+        </ion-modal>
+
+</ion-content>

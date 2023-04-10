@@ -1,0 +1,87 @@
+ion-content {
+  --background-color: #ffb500;
+}
+
+table {
+  width: 100%;
+  border-spacing: 0;
+  border-collapse: collapse;
+}
+
+.table {
+  margin: 0 auto;
+}
+
+tr {
+  background-color: #e0e0e0;
+}
+
+td {
+  font-size: small;
+  text-align: center;
+  border: 1px solid #08001d;
+  color: #020202;
+  padding: 8px;
+}
+
+th {
+  padding: 8px;
+  text-align: center;
+  background-color: #08001d;
+  border: 1px solid #08001d;
+  color: #ffffff;
+}
+
+.prueba2 {
+  padding: 2px;
+  background-color: #fae5c6;
+  color: #000000;
+}
+
+.black {
+  border: 0.5px solid #ffffff;
+  border-top: none;
+  border-bottom: 1px solid #000000;
+  color: #ffffff;
+}
+
+.white {
+  color: #ffffff;
+}
+
+.file-select {
+  position: relative;
+  display: inline-block;
+  margin-top: 5px;
+}
+
+.file-select::before {
+  background-color: #08001d;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 3px;
+  content: 'Cargar Datos';
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+}
+
+.file-select input[type="file"] {
+  opacity: 0;
+  width: 200px;
+  height: 32px;
+  display: inline-block;
+}
+
+#src-file1::before {
+  content: 'Cargar Datos';
+}
+
+#noaprobado {
+  background-color: #d32d2d;
+  color: #ffffff;
+}

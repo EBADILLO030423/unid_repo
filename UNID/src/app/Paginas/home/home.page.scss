@@ -1,0 +1,116 @@
+ion-content {
+  --background-color: #0F4C81;
+  }
+  
+  table {
+  width: 100%;
+  border-spacing: 0;
+  border-collapse: separate;
+  }
+  
+  .table {
+  margin: 0 auto;
+  font-family: Arial, sans-serif;
+  }
+  
+  tr {
+  background-color: #f2f2f2;
+  }
+  
+  td {
+  font-size: 14px;
+  text-align: center;
+  border: 1px solid #ddd;
+  color: #333;
+  padding: 10px;
+  }
+  
+  th:nth-child(4),
+  td:nth-child(4) {
+  min-width: 5px;
+  max-width: 5px;
+  }
+  
+  th {
+  padding: 10px;
+  text-align: center;
+  background-color: #0F4C81;
+  border: 1px solid #ddd;
+  color: #fff;
+  }
+  
+  .black {
+  border-color: #fff;
+  border-style: solid;
+  border-width: .5px;
+  border-top: none;
+  border-bottom: #000;
+  color: #fff;
+  }
+  
+  .white {
+  color: #fff;
+  }
+  
+  #botonadd {
+  --background-color: #fff;
+  --color: #0F4C81;
+  --color-activated: #2dd36f;
+  --color-focused: #2dd36f;
+  --color-hover: #2dd36f;
+  --opacity: 1;
+  --padding-bottom: 8px;
+  --padding-end: 20px;
+  --padding-start: 20px;
+  --padding-top: 8px;
+  --ripple-color: #0F4C8100;
+  }
+  
+  #botoninf {
+  --background-color: #fff;
+  --color: #0F4C81;
+  --color-activated: #000;
+  --color-focused: #000;
+  --color-hover: #000;
+  --background-activated: #fff;
+  --background-activated-opacity: 1;
+  --background-focused: #fff;
+  --background-focused-opacity: 1;
+  --background-hover: #e7d3b6;
+  --background-hover-opacity: 1;
+  --opacity: 1;
+  --padding-bottom: 8px;
+  --padding-end: 20px;
+  --padding-start: 20px;
+  --padding-top: 8px;
+  --ripple-color: #0F4C8100;
+  }
+  
+  ion-input{
+  background-color: #fff;
+  color: #0F4C81;
+  padding: 20px;
+  font-size: 24px;
+  border: none;
+  border-radius: 5px;
+  }
+  
+  ion-footer{
+  background-color: #0F4C81;
+  color: #fff;
+  font-size: 16px;
+  text-align: center;
+  padding: 10px;
+  }
+  
+  .prueba2, .prueba3{
+  padding: 10px;
+  background-color: #fae5c6;
+  color: #0F4C81;
+  }
+  
+  .prueba3:hover {
+  padding: 10px;
+  background-color: #e7d3b6;
+  color: #0F4C81;
+  }

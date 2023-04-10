@@ -1,0 +1,123 @@
+ion-content {
+  background-color: #f1f1f1;
+}
+
+table {
+  width: 100%;
+  border-spacing: 0px;
+  border-collapse: separate;
+}
+
+.table {
+  margin: 0 auto;
+}
+
+tr {
+  background-color: #fff;
+}
+
+td {
+  font-size: 16px;
+  text-align: center;
+  border-color: #ccc;
+  border-style: solid;
+  color: #444;
+  padding: 12px;
+}
+
+th {
+  font-weight: bold;
+  text-align: center;
+  background-color: #333;
+  border-style: solid;
+  border-color: #ccc;
+  color: #fff;
+  padding: 12px;
+}
+
+th:first-child,
+td:first-child {
+  min-width: 80px;
+  max-width: 80px;
+}
+
+th:nth-child(2),
+td:nth-child(2) {
+  min-width: 50px;
+  max-width: 50px;
+}
+
+th:nth-child(10),
+td:nth-child(10),
+th:nth-child(11),
+td:nth-child(11) {
+  min-width: 100px;
+  max-width: 100px;
+}
+
+.prueba2 {
+  padding-left: 2px;
+  padding-right: 2px;
+  background-color: #ffcc99;
+  color: #000000;
+}
+
+.black {
+  border-color: #000000;
+  border-style: solid;
+  border-width: .5px;
+  border-top: none;
+  border-bottom: #000000;
+  color: #000000;
+}
+
+.white {
+  color: #fff;
+}
+
+.file-select {
+  position: relative;
+  display: inline-block;
+  margin-top: 5px;
+}
+
+.file-select::before {
+  background-color: #333;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 3px;
+  content: 'Cargar Archivo';
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.file-select:hover::before {
+  background-color: #666;
+}
+
+.file-select input[type="file"] {
+  opacity: 0;
+  width: 200px;
+  height: 32px;
+  display: inline-block;
+}
+
+#src-file1::before {
+  content: 'Cargar Archivo';
+}
+
+#aprobado {
+  background-color: #2ecc71;
+  color: #fff;
+}
+
+#pendiente {
+  color: #f1c40f;
+}

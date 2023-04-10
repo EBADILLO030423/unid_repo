@@ -1,0 +1,43 @@
+<ion-header>
+  <ion-toolbar color="primary" class="ion-text-center">
+    <ion-buttons slot="start" (click)="MENU()">
+      <ion-menu-button auto-hide="false"></ion-menu-button>
+    </ion-buttons>
+    <img src="assets/UNDICOMPLETO.png" width="120" height="60" class="ion-float-right">
+  </ion-toolbar>
+</ion-header>
+<ion-content class="ion-padding" class="ion-text-center">
+  <table class="table" style="width: 100%; border-spacing: 0; border-collapse: collapse; margin: 0 auto;">
+    <thead>
+      <tr style="background-color: #08001d; color: #fff;">
+        <th>ID Docente</th>
+        <th>Fecha</th>
+        <th>Día</th>
+        <th>Horario E</th>
+        <th>Entrada</th>
+        <th>Horario S</th>
+        <th>Salida</th>
+        <th>Irregularidades</th>
+      </tr>
+    </thead>
+    <tbody *ngFor="let i of Info">
+      <tr style="background-color: #fae5c6;">
+        <td>{{i.ID}}</td>
+        <td>{{i.Fecha}}</td>
+        <td>{{i.Dia}}</td>
+        <td>{{i.HorE}}</td>
+        <td>{{i.Ent}}</td>
+        <td>{{i.HorS}}</td>
+        <td>{{i.Sal}}</td>
+        <td>
+          <ion-select interface="popover" style="background-color: #08001d; color: #fff;">
+            <ion-select-option value="Omision">Omision</ion-select-option>
+            <ion-select-option value="Aclaracion">Aclaracion</ion-select-option>
+            <ion-select-option value="Incidencia">Incidencia</ion-select-option>
+            <ion-select-option value="Reposición de clase">Reposición</ion-select-option>
+          </ion-select>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</ion-content>

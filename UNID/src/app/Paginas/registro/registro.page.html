@@ -1,0 +1,43 @@
+<ion-header>
+  <ion-toolbar color="secondary" class="ion-align-items-center">
+    <ion-buttons slot="start" (click)="MENU()">
+      <ion-menu-button auto-hide="false"></ion-menu-button>
+    </ion-buttons>
+    <img src="assets/UNDICOMPLETO.png" width="120" height="60" class="ion-align-self-end">
+  </ion-toolbar>
+</ion-header>
+<ion-content class="ion-padding ion-text-center">
+  <table class="ion-text-center">
+    <thead>
+      <tr class="prueba2 ion-text-uppercase">
+        <th>AC-No.</th>
+        <th>Nombre</th>
+        <th>Fecha</th>
+        <th>Hora</th>
+        <th>Estado</th>
+        <th>Tipo</th>
+      </tr>
+    </thead>
+    <tbody *ngFor="let i of Info">
+      <tr *ngIf="i.Tipo == 'FOT'">
+        <td class="prueba2">{{i.ID}}</td>
+        <td class="prueba2">{{i.Nombre}}</td>
+        <td class="prueba2" (click)="onClick(i.Fecha)">{{i.Fecha}}</td>
+        <td class="prueba2">{{i.Hora}}</td>
+        <td class="prueba2">{{i.Estado}}</td>
+        <td class="prueba2">{{i.Tipo}}</td>
+      </tr>
+      <tr *ngIf="i.Tipo != 'FOT'">
+        <td class="prueba2" id="noaprobado">{{i.ID}}</td>
+        <td class="prueba2" id="noaprobado">{{i.Nombre}}</td>
+        <td class="prueba2" id="noaprobado">{{i.Fecha}}</td>
+        <td class="prueba2" id="noaprobado">{{i.Hora}}</td>
+        <td class="prueba2" id="noaprobado">{{i.Estado}}</td>
+        <td class="prueba2" id="noaprobado">{{i.Tipo}}</td>
+      </tr>
+    </tbody>
+  </table>
+  <div class="file-select" id="src-file1" (change)="readExcelFile($event)">
+    <input type="file" name="src-file1" aria-label="Archivo">
+  </div>
+</ion-content>

@@ -1,0 +1,76 @@
+ion-content {
+  --background-color: #ffb500;
+}
+
+table {
+  width: 100%;
+  border-spacing: 0;
+  border-collapse: separate;
+}
+
+.table {
+  margin: 0 auto;
+}
+
+tr {
+  background-color: #e0e0e0;
+}
+
+td {
+  font-size: small;
+  text-align: center;
+  border: solid 1px #08001d;
+  color: #020202;
+  padding: 8px;
+}
+
+th {
+  padding: 8px;
+  text-align: center;
+  background-color: #08001d;
+  color: #ffffff;
+  border: solid 1px #08001d;
+}
+
+.black {
+  border-color: #ffffff;
+  border-width: 0.5px;
+  border-top: none;
+  border-bottom: solid 1px #000000;
+  color: #ffffff;
+}
+
+.white {
+  color: #ffffff;
+}
+
+ion-input {
+  background-color: #ffb500;
+  color: #000000;
+  padding: 20px;
+  font-size: xx-large;
+}
+
+ion-footer {
+  background-color: #08001d;
+}
+
+.prueba2 {
+  padding: 8px;
+  background-color: #fae5c6;
+  color: #000000;
+}
+
+.apro {
+  background-color: #2dd36f;
+  color: #000000;
+}
+
+.noap {
+  background-color: #eb445a;
+  color: #000000;
+}
+
+ion-select {
+  color: #000000;
+}

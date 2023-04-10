@@ -1,0 +1,90 @@
+<ion-header>
+  <ion-toolbar color="secondary" align="center">
+    <ion-buttons slot="start" (click)="MENU()">
+      <ion-menu-button auto-hide="false"></ion-menu-button>
+    </ion-buttons>
+<img src="assets/UNDICOMPLETO.png" width="120" height="60" align="right">
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding" align="center">
+
+  <table class="table" align="center">
+    <thead>
+      <tr class="prueba2">
+        <th class="white">ID</th>
+        <th class="white">CRN</th>
+        <th class="white">D</th>
+        <th class="white">L</th>
+        <th class="white">M</th>
+        <th class="white">M</th>
+        <th class="white">J</th>
+        <th class="white">V</th>
+        <th class="white">S</th>
+        <th class="white">HORA INICIO</th>
+        <th class="white">HORA FIN</th>
+      </tr>
+    </thead>
+    <tbody *ngFor="let i of Info">
+      <tr>
+        <td class="prueba2">{{i.ID}}</td>
+        <td class="prueba2">{{i.CRN}}</td>
+        <td class="prueba2" id="pendiente" *ngIf="i.D == false">
+          <ion-icon name="help-circle-outline"></ion-icon>
+        </td>
+        <td class="prueba2" id="aprobado" *ngIf="i.D == true">
+          <ion-icon name="checkmark-circle-outline"></ion-icon>
+        </td>
+        <td class="prueba2" id="pendiente" *ngIf="i.L == false">
+          <ion-icon name="help-circle-outline"></ion-icon>
+        </td>
+        <td class="prueba2" id="aprobado" *ngIf="i.L == true">
+          <ion-icon name="checkmark-circle-outline"></ion-icon>
+        </td>
+        <td class="prueba2" id="pendiente" *ngIf="i.Ma == false">
+          <ion-icon name="help-circle-outline"></ion-icon>
+        </td>
+        <td class="prueba2" id="aprobado" *ngIf="i.Ma == true">
+          <ion-icon name="checkmark-circle-outline"></ion-icon>
+        </td>
+        <td class="prueba2" id="pendiente" *ngIf="i.Mi == false">
+          <ion-icon name="help-circle-outline"></ion-icon>
+        </td>
+        <td class="prueba2" id="aprobado" *ngIf="i.Mi == true">
+          <ion-icon name="checkmark-circle-outline"></ion-icon>
+        </td>
+        <td class="prueba2" id="pendiente" *ngIf="i.J == false">
+          <ion-icon name="help-circle-outline"></ion-icon>
+        </td>
+        <td class="prueba2" id="aprobado" *ngIf="i.J == true">
+          <ion-icon name="checkmark-circle-outline"></ion-icon>
+        </td>
+        <td class="prueba2" id="pendiente" *ngIf="i.V == false">
+          <ion-icon name="help-circle-outline"></ion-icon>
+        </td>
+        <td class="prueba2" id="aprobado" *ngIf="i.V == true">
+          <ion-icon name="checkmark-circle-outline"></ion-icon>
+        </td>
+        <td class="prueba2" id="pendiente" *ngIf="i.S == false">
+          <ion-icon name="help-circle-outline"></ion-icon>
+        </td>
+        <td class="prueba2" id="aprobado" *ngIf="i.S == true">
+          <ion-icon name="checkmark-circle-outline"></ion-icon>
+        </td>
+        <td class="prueba2">{{i.HORAINICIO}}</td>
+        <td class="prueba2">{{i.HORAFIN}}</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  <div class="file-select" id="src-file1" (change)="readExcelFile($event)">
+    <input type="file" name="src-file1" aria-label="Archivo">
+  </div>
+
+  <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+    <ion-fab-button color="secondary" (click)="testdedia()">
+      <ion-icon name="save"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+
+</ion-content>

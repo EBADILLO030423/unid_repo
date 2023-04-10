@@ -1,0 +1,76 @@
+<ion-header>
+  <ion-toolbar color="secondary" class="header">
+    <ion-buttons slot="start" (click)="MENU()">
+      <ion-menu-button auto-hide="false"></ion-menu-button>
+    </ion-buttons>
+    <img src="assets/UNDICOMPLETO.png" width="120" height="60" class="logo">
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <div class="table-container">
+    <table class="table">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>CRN</th>
+          <th>D</th>
+          <th>L</th>
+          <th>M</th>
+          <th>M</th>
+          <th>J</th>
+          <th>V</th>
+          <th>S</th>
+          <th>HORA INICIO</th>
+          <th>HORA FIN</th>
+        </tr>
+      </thead>
+      <tbody *ngFor="let i of Info">
+        <tr>
+          <td>{{i.ID}}</td>
+          <td>{{i.CRN}}</td>
+          <td *ngIf="i.D == undefined" class="icon-container">
+            <ion-icon name="help-circle-outline"></ion-icon>
+          </td>
+          <td *ngIf="i.D != undefined" class="icon-container">
+            <ion-icon name="checkmark-circle-outline"></ion-icon>
+          </td>
+          <td *ngIf="i.L == undefined" class="icon-container">
+            <ion-icon name="help-circle-outline"></ion-icon>
+          </td>
+          <td *ngIf="i.L != undefined" class="icon-container">
+            <ion-icon name="checkmark-circle-outline"></ion-icon>
+          </td>
+          <td *ngIf="i.Ma == undefined" class="icon-container">
+            <ion-icon name="help-circle-outline"></ion-icon>
+          </td>
+          <td *ngIf="i.Ma != undefined" class="icon-container">
+            <ion-icon name="checkmark-circle-outline"></ion-icon>
+          </td>
+          <td *ngIf="i.Mi == undefined" class="icon-container">
+            <ion-icon name="help-circle-outline"></ion-icon>
+          </td>
+          <td *ngIf="i.Mi != undefined" class="icon-container">
+            <ion-icon name="checkmark-circle-outline"></ion-icon>
+          </td>
+          <td *ngIf="i.J == undefined" class="icon-container">
+            <ion-icon name="help-circle-outline"></ion-icon>
+          </td>
+          <td *ngIf="i.J != undefined" class="icon-container">
+            <ion-icon name="checkmark-circle-outline"></ion-icon>
+          </td>
+          <td *ngIf="i.V == undefined" class="icon-container">
+            <ion-icon name="help-circle-outline"></ion-icon>
+          </td>
+          <td *ngIf="i.V != undefined" class="icon-container">
+            <ion-icon name="checkmark-circle-outline"></ion-icon>
+          </td>
+          <td *ngIf="i.S == undefined" class="icon-container">
+            <ion-icon name="help-circle-outline"></ion-icon>
+          </td>
+          <td *ngIf="i.S != undefined" class="icon-container">
+            <ion-icon name="checkmark-circle-outline"></ion-icon>
+          </td>
+          <td>{{i.HORAINICIO}}</td>
+          <td>{{i.H
+

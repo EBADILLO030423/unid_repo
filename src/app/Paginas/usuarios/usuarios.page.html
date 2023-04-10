@@ -1,0 +1,43 @@
+<ion-header>
+  <ion-toolbar color="secondary" align="center">
+    <ion-buttons slot="start" (click)="MENU()">
+      <ion-menu-button auto-hide="false"></ion-menu-button>
+    </ion-buttons>
+<img src="assets/UNDICOMPLETO.png" width="120" height="60" align="right">
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <table class="table" align="center">
+    <thead>
+      <tr>
+        <th class="prueba5" (click)="creatuser()"><ion-icon slot="center" name="add-circle"></ion-icon></th>
+      </tr>
+      <tr class="prueba2">
+        <th class="white">ID</th>
+        <th class="white">USUARIO</th>
+        <th class="white">EMAIL</th>
+        <th class="white">TIPO</th>
+        <th class="white"><ion-icon slot="center" name="reload-outline"></ion-icon></th>
+        <th class="white"><ion-icon slot="center" name="trash"></ion-icon></th>
+      </tr>
+    </thead>
+    <tbody *ngFor="let i of Info">
+      <tr>
+        <td class="prueba2">{{i.id}}</td>
+        <td class="prueba2"><ion-input type="text" value="{{i.username}}" #user></ion-input></td>
+        <td class="prueba2"><ion-input type="text" value="{{i.email}}" #email></ion-input></td>
+        <td class="prueba2">
+          <ion-select  value="{{i.Tipo}}" interface="popover" #Tipo>
+            <ion-select-option value="Admin">Admin</ion-select-option>
+            <ion-select-option value="Horarios">Horarios</ion-select-option>
+            <ion-select-option value="Registros">Registros</ion-select-option>
+            <ion-select-option value="Evaluacion">Evaluacion</ion-select-option>
+          </ion-select>
+        </td>
+        <td class="prueba3" (click)="update(i.id,user.value,email.value,Tipo.value)"><ion-icon slot="center" name="reload-outline" color="secondary"></ion-icon></td>
+        <td class="prueba4" (click)="delate(i.id)"><ion-icon slot="center" name="trash" color="secondary"></ion-icon></td>
+      </tr>
+    </tbody>
+  </table>
+</ion-content>
