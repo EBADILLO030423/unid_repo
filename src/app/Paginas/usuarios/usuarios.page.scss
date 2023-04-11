@@ -1,131 +1,132 @@
 ion-content {
-    --background: #ffb500;
+  --background: #ffb500;
 }
+
 table {
-    width: 100%;
-    border-spacing: 0px;
-    border-collapse: separate;
-  }
-  
-  .table {
-    margin: 0 auto;
-  }
-  
-  tr {
-    background-color: #e0e0e000;
-  }
-  
-  td {
-    font-size: small;
-    text-align: center;
-    border-color: #08001d;
-    border-style: solid;
-    padding: 8px;
-  }
-  
-  th {
-    padding-left: 2px;
-    padding-right: 2px;
-    text-align: center;
-    background-color: #08001d;
-    border-style: solid;
-    border-color: #08001d;
-    color: #ffffff;
-    padding: 8px;
-  }
-  
-  
-  .prueba2 {
-    padding-left: 2px;
-    padding-right: 2px;
-    background-color: #fae5c6;
-    color: #000000;
-  }
-  .prueba3{
-    padding-left: 2px;
-    padding-right: 2px;
-    background-color: #fae5c6;
-    color: #000000;
-  }
-  .prueba3:hover{
-    padding-left: 2px;
-    padding-right: 2px;
-    background-color: #2dd36f;
-    color: #ffffff;
-  }
-  .prueba4{
-    padding-left: 2px;
-    padding-right: 2px;
-    background-color: #fae5c6;
-    color: #000000;
-  }
-  .prueba4:hover{
-    padding-left: 2px;
-    padding-right: 2px;
-    background-color: #eb445a;
-    color: #ffffff;
-  }
-  .prueba5{
-    padding-left: 2px;
-    padding-right: 2px;
-    background-color: #08001d;
-    color: #ffffff;
-  }
-  .prueba5:hover{
-    padding-left: 2px;
-    padding-right: 2px;
-    background-color: #2dd36f;
-    color: #ffffff;
-  }
-  .black {
-    border-color: #ffffff;
-    border-style: solid;
-    border-width: .5px;
-    border-top: none;
-    border-bottom: #000000;
-    color: #ffffff;
-  }
-  
-  .white {
-    color: #ffffff;
-  }
-  
-  .file-select {
-    position: relative;
-    display: inline-block;
-    margin-top: 5px;
-  }
-  
-  .file-select::before {
-    background-color: #08001d;
-    color: white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 3px;
-    content: 'Cargar Datos'; 
-    position: absolute;
-    left: 0;
-    right: 0;
-    top: 0;
-    bottom: 0;
-    
-  }
-  
-  .file-select input[type="file"] {
-    opacity: 0;
-    width: 200px;
-    height: 32px;
-    display: inline-block;
-  }
-  
-  #src-file1::before {
-    content: 'Cargar Datos';
-  }
-  #aprobado{
-    background-color:#2dd36f;
-    color: #000000;
-  }
-  #pendiente{
-    color: #000000;
-  }
+  width: 100%;
+  border-spacing: 0px;
+  border-collapse: separate;
+}
+
+.table {
+  margin: 0 auto;
+  border: 1px solid #08001d;
+  border-radius: 8px;
+}
+
+tr {
+  background-color: #f7f7f7;
+}
+
+td {
+  font-size: small;
+  text-align: center;
+  border: 1px solid #08001d;
+  padding: 8px;
+}
+
+th {
+  font-weight: bold;
+  padding: 8px;
+  text-align: center;
+  background-color: #08001d;
+  color: #ffffff;
+  border: 1px solid #08001d;
+}
+
+.prueba2, .prueba3, .prueba4, .prueba5 {
+  padding: 8px;
+  color: #000000;
+}
+
+.prueba2 {
+  background-color: #f4a460;
+}
+
+.prueba3 {
+  background-color: #e8a87c;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.prueba3:hover {
+  background-color: #2dd36f;
+  color: #ffffff;
+}
+
+.prueba4 {
+  background-color: #f4a460;
+}
+
+.prueba4:hover {
+  background-color: #eb445a;
+  color: #ffffff;
+}
+
+.prueba5 {
+  background-color: #08001d;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.prueba5:hover {
+  background-color: #2dd36f;
+  color: #ffffff;
+}
+
+.black {
+  border: 1px solid #ffffff;
+  border-top: none;
+  border-bottom: 1px solid #000000;
+  color: #ffffff;
+}
+
+.white {
+  color: #ffffff;
+}
+
+.file-select {
+  position: relative;
+  display: inline-block;
+  margin-top: 5px;
+}
+
+.file-select::before {
+  background-color: #08001d;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 3px;
+  content: 'Cargar Datos';
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.file-select:hover::before {
+  background-color: #2dd36f;
+}
+
+.file-select input[type="file"] {
+  opacity: 0;
+  width: 200px;
+  height: 32px;
+  display: inline-block;
+}
+
+#src-file1::before {
+  content: 'Cargar Datos';
+}
+
+#aprobado {
+  background-color: #2dd36f;
+  color: #ffffff;
+  padding: 8px;
+  border-radius: 8px;
+}
+
+#pendiente {
+  color: #000000;
+}

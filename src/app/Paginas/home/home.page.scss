@@ -1,116 +1,116 @@
 ion-content {
-    --background: #ffb500;
-}
-table {
-    width: 100%;
-    border-spacing: 0px;
-    border-collapse: separate;
+  --background-color: #0F4C81;
+  }
+  
+  table {
+  width: 100%;
+  border-spacing: 0;
+  border-collapse: separate;
   }
   
   .table {
-    margin: 0 auto;
+  margin: 0 auto;
+  font-family: Arial, sans-serif;
   }
   
   tr {
-    background-color: #e0e0e000;
+  background-color: #f2f2f2;
   }
   
   td {
-    font-size: small;
-    text-align: center;
-    border-color: #08001d;
-    border-style: solid;
-    color: #020202;
-    padding: 8px;
+  font-size: 14px;
+  text-align: center;
+  border: 1px solid #ddd;
+  color: #333;
+  padding: 10px;
   }
+  
   th:nth-child(4),
   td:nth-child(4) {
-    min-width: 5px;
-    max-width: 5px;
+  min-width: 5px;
+  max-width: 5px;
   }
   
   th {
-    padding-left: 2px;
-    padding-right: 2px;
-    text-align: center;
-    background-color: #08001d;
-    border-style: solid;
-    border-color: #08001d;
-    color: #ffffff;
-    padding: 8px;
+  padding: 10px;
+  text-align: center;
+  background-color: #0F4C81;
+  border: 1px solid #ddd;
+  color: #fff;
   }
   
   .black {
-    border-color: #ffffff;
-    border-style: solid;
-    border-width: .5px;
-    border-top: none;
-    border-bottom: #000000;
-    color: #ffffff;
+  border-color: #fff;
+  border-style: solid;
+  border-width: .5px;
+  border-top: none;
+  border-bottom: #000;
+  color: #fff;
   }
   
   .white {
-    color: #ffffff;
-  }
-  #botonadd {
-    --background: #fc000000;
-    --color: #ffffff;
-    --color-activated: #2dd36f;
-    --color-focused: #2dd36f;
-    --color-hover: #2dd36f;
-    --opacity: 1;
-    --padding-bottom: 2px;
-    --padding-end: 2px;
-    --padding-start: 2px;
-    --padding-top: 2px;
-    --ripple-color: #ffffff00;
-  }
-  #botoninf {
-    --background: #fefefe00;
-    --color: #000000;
-    --color-activated: #000000;
-    --color-focused: #000000;
-    --color-hover: #000000;
-    --background-activated: #ffffff;
-    --background-activated-opacity: 1;
-    --background-focused: #ffffff;
-    --background-focused-opacity: 1;
-    --background-hover: #e7d3b6;
-    --background-hover-opacity: 1;
-    --opacity: 1;
-    --padding-bottom: 2px;
-    --padding-end: 2px;
-    --padding-start: 2px;
-    --padding-top: 2px;
-    --ripple-color: #ffffff00;
-  }
-  ion-input{
-    background-color: #ffb500;
-    color: #000000;
-    padding: 20px;
-    font-size: xx-large;
-  }
-  ion-footer{
-    background-color: #08001d;
-  }
-  .prueba2,.prueba3{
-    padding-left: 2px;
-    padding-right: 2px;
-    background-color: #fae5c6;
-    color: #000000;
-  }
-  .prueba3:hover {
-    padding-left: 2px;
-    padding-right: 2px;
-    background-color: #e7d3b6;
-    color: #000000;
-  }
-
-  .swal2-container {
-    z-index: 9999 !important;
+  color: #fff;
   }
   
-  .swal2-modal {
-    width: auto !important;
-    max-width: 500px !important;
+  #botonadd {
+  --background-color: #fff;
+  --color: #0F4C81;
+  --color-activated: #2dd36f;
+  --color-focused: #2dd36f;
+  --color-hover: #2dd36f;
+  --opacity: 1;
+  --padding-bottom: 8px;
+  --padding-end: 20px;
+  --padding-start: 20px;
+  --padding-top: 8px;
+  --ripple-color: #0F4C8100;
+  }
+  
+  #botoninf {
+  --background-color: #fff;
+  --color: #0F4C81;
+  --color-activated: #000;
+  --color-focused: #000;
+  --color-hover: #000;
+  --background-activated: #fff;
+  --background-activated-opacity: 1;
+  --background-focused: #fff;
+  --background-focused-opacity: 1;
+  --background-hover: #e7d3b6;
+  --background-hover-opacity: 1;
+  --opacity: 1;
+  --padding-bottom: 8px;
+  --padding-end: 20px;
+  --padding-start: 20px;
+  --padding-top: 8px;
+  --ripple-color: #0F4C8100;
+  }
+  
+  ion-input{
+  background-color: #fff;
+  color: #0F4C81;
+  padding: 20px;
+  font-size: 24px;
+  border: none;
+  border-radius: 5px;
+  }
+  
+  ion-footer{
+  background-color: #0F4C81;
+  color: #fff;
+  font-size: 16px;
+  text-align: center;
+  padding: 10px;
+  }
+  
+  .prueba2, .prueba3{
+  padding: 10px;
+  background-color: #fae5c6;
+  color: #0F4C81;
+  }
+  
+  .prueba3:hover {
+  padding: 10px;
+  background-color: #e7d3b6;
+  color: #0F4C81;
   }
